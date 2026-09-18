@@ -65,7 +65,23 @@
       font-size: 1.15rem;
       font-weight: 600;
       margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-signed { background: #1a472a; color: #4ade80; }
+    .badge-debug { background: #4a3a1a; color: #facc15; }
+    .badge-release { background: #1a2a4a; color: #93c5fd; }
 
     .apk-desc {
       color: var(--muted);
@@ -104,21 +120,30 @@
 
     <div class="apk-list">
       <div class="apk-card">
-        <div class="apk-name">Bypass 1.0.0</div>
+        <div class="apk-name">
+          Bypass 1.0.0
+          <span class="badge badge-signed">Signed</span>
+        </div>
         <div class="apk-desc">VPN/Clash client — single-switch profile filter that removes US nodes and load-balances the rest through mihomo.</div>
-        <div class="apk-size">39 MB · Signed APK</div>
+        <div class="apk-size">39 MB · Signed release APK</div>
         <a href="Bypass-1.0.0-signed.apk" class="download-btn" download>Download APK</a>
       </div>
 
       <div class="apk-card">
-        <div class="apk-name">OtherworldDrive 3.0</div>
+        <div class="apk-name">
+          OtherworldDrive 3.0
+          <span class="badge badge-debug">Debug</span>
+        </div>
         <div class="apk-desc">Google-Photos-style Android client for a Discord-Free-Cloud (ddrive) server. Streams photos and videos from your own server.</div>
-        <div class="apk-size">1.4 MB · Debug APK</div>
+        <div class="apk-size">1.4 MB · Debug build (Jetpack Compose, pure Kotlin)</div>
         <a href="OtherworldDrive-3.0.apk" class="download-btn" download>Download APK</a>
       </div>
 
       <div class="apk-card">
-        <div class="apk-name">Scenic (Release)</div>
+        <div class="apk-name">
+          Scenic
+          <span class="badge badge-release">Release</span>
+        </div>
         <div class="apk-desc">Mobile app — scenic-related Android project (release build).</div>
         <div class="apk-size">16 MB · Release APK</div>
         <a href="Scenic-1.0-release.apk" class="download-btn" download>Download APK</a>
