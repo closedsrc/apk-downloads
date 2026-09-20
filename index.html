@@ -79,8 +79,6 @@
       letter-spacing: 0.5px;
     }
 
-    .badge-signed { background: #1a472a; color: #4ade80; }
-    .badge-debug { background: #4a3a1a; color: #facc15; }
     .badge-release { background: #1a2a4a; color: #93c5fd; }
 
     .apk-desc {
@@ -90,10 +88,17 @@
       line-height: 1.5;
     }
 
-    .apk-size {
+    .apk-meta {
       font-size: 0.85rem;
       color: var(--muted);
       margin-bottom: 0.75rem;
+    }
+
+    .apk-meta code {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      color: #9aa0b5;
+      word-break: break-all;
     }
 
     .download-btn {
@@ -111,44 +116,53 @@
     .download-btn:hover {
       background: var(--accent-hover);
     }
+
+    footer {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>APK Downloads</h1>
-    <p class="subtitle">Simple static page to download APK files directly.</p>
+    <p class="subtitle">Signed release builds — latest versions.</p>
 
     <div class="apk-list">
       <div class="apk-card">
         <div class="apk-name">
-          Bypass 1.0.0
-          <span class="badge badge-signed">Signed</span>
-        </div>
-        <div class="apk-desc">VPN/Clash client — single-switch profile filter that removes US nodes and load-balances the rest through mihomo.</div>
-        <div class="apk-size">39 MB · Signed release APK</div>
-        <a href="Bypass-1.0.0-signed.apk" class="download-btn" download>Download APK</a>
-      </div>
-
-      <div class="apk-card">
-        <div class="apk-name">
-          OtherworldDrive 3.0
-          <span class="badge badge-debug">Debug</span>
-        </div>
-        <div class="apk-desc">Google-Photos-style Android client for a Discord-Free-Cloud (ddrive) server. Streams photos and videos from your own server.</div>
-        <div class="apk-size">1.4 MB · Debug build (Jetpack Compose, pure Kotlin)</div>
-        <a href="OtherworldDrive-3.0.apk" class="download-btn" download>Download APK</a>
-      </div>
-
-      <div class="apk-card">
-        <div class="apk-name">
-          Scenic
+          Bypass 2.0.0
           <span class="badge badge-release">Release</span>
         </div>
-        <div class="apk-desc">Mobile app — scenic-related Android project (release build).</div>
-        <div class="apk-size">4.5 MB · Release APK</div>
-        <a href="Scenic-1.0-release.apk" class="download-btn" download>Download APK</a>
+        <div class="apk-desc">Android VPN client for Clash-compatible profiles: one switch, load-balanced across your nodes, US exit nodes excluded.</div>
+        <div class="apk-meta">40 MB &middot; com.vpn.simple &middot; v2.0.0 (code 2)</div>
+        <a href="Bypass-2.0.0.apk" class="download-btn" download>Download APK</a>
+      </div>
+
+      <div class="apk-card">
+        <div class="apk-name">
+          Ember 1.2
+          <span class="badge badge-release">Release</span>
+        </div>
+        <div class="apk-desc">Native Android streaming app — films and series from TMDB-backed providers, anime via AniList / Anikoto / MegaPlay, with offline downloads and a quality choice.</div>
+        <div class="apk-meta">4.6 MB &middot; com.scenic.app &middot; v1.2 (code 3)</div>
+        <a href="Ember-1.2.apk" class="download-btn" download>Download APK</a>
+      </div>
+
+      <div class="apk-card">
+        <div class="apk-name">
+          Otherworld Drive 3.4
+          <span class="badge badge-release">Release</span>
+        </div>
+        <div class="apk-desc">Google-Photos-style Android client for a Discord-Free-Cloud server. Streams photos and videos from your own server, with background backup.</div>
+        <div class="apk-meta">2.2 MB &middot; com.dfc.mobile &middot; v3.4 (code 7)</div>
+        <a href="OtherworldDrive-3.4.apk" class="download-btn" download>Download APK</a>
       </div>
     </div>
+
+    <footer>Last updated 2026-09-21</footer>
   </div>
 </body>
 </html>
